@@ -1,0 +1,204 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    width:  100%;
+    height: 100vh;
+    
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.evenment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 20px;
+    background-color: rgb(224, 255, 245);
+    padding: 2rem;
+    width: 90%;
+}
+.artileinfo{
+    border-radius: 10px;
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+    background-color: white;
+    padding: 1em;
+    box-shadow: 2px 2px 3px rgb(86, 85, 85);  
+}
+.bordercolor{
+    border: 2px solid rgb(0, 200, 255);
+}
+.btndiv{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap:2rem;
+
+}
+.btn{
+ width: 30%;
+ height: 2rem;
+ border-radius: 5px;
+ border: none;
+ background-color: blue;
+ color: white;
+}
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.billets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 20px;
+    background-color: rgb(224, 255, 245);
+    padding: 2rem;
+    width: 90%;
+}
+.artileinfos2{
+    border-radius: 10px;
+    width: 70%;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:1rem;
+    background-color: white;
+    padding: 1em;
+    box-shadow: 2px 2px 3px rgb(86, 85, 85);  
+}
+.divbtnplusmoin{
+    display: flex;
+    gap: 1rem;
+
+}
+.btnplusmoin{
+   width: 30px;
+   height: 20px;
+   border: none;
+   border-radius: 5px;
+   background-color: rgb(227, 227, 227);
+}
+.artileformul{
+    border-radius: 10px;
+    width: 70%;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:1rem;
+    background-color: white;
+    padding: 1em;
+    box-shadow: 2px 2px 3px rgb(86, 85, 85);  
+}
+.artileformul form{
+    display: flex;
+    flex-direction: column;
+    
+}
+form input{
+    height:1.6rem;
+    border: 2px solid rgb(177, 177, 177);
+    border-radius: 3px;
+}
+.artileinfos3{
+    border-radius: 10px;
+    width: 70%;
+    /* height: 15rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:1rem;
+    background-color: white;
+    /* padding: 1em; */
+    box-shadow: 2px 2px 3px rgb(86, 85, 85);  
+}
+.section3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.informationajouter{
+    display: flex;
+    flex-direction: column;
+
+}
+.supprimer{
+    
+}
+@media (width>=500px) {
+    .evenment{
+    display: grid;
+    grid-template-columns: repeat(auto-fitl,20%);
+    grid-template-rows: 5% 50%  50%;
+    column-gap:0px;
+    row-gap: 0px;
+   place-items: center;
+   justify-items: center;
+    border-radius: 20px;
+    background-color: rgb(224, 255, 245);
+    
+    width: 40%;
+}
+.artileinfo{
+    border-radius: 10px;
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+    background-color: white;
+    padding: 1em;
+    box-shadow: 2px 2px 3px rgb(86, 85, 85);  
+}
+.evenment h1{
+    grid-column-start: 2 span;
+}
+.billets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 20px;
+    background-color: rgb(224, 255, 245);
+    padding: 2rem;
+    width: 40%;
+}
+.btn{
+ width: 10%;
+ height: 2rem;
+ border-radius: 5px;
+ border: none;
+ background-color: blue;
+ color: white;
+}
+    
+}
