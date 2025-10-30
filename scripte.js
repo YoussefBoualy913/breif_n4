@@ -1,3 +1,6 @@
+let evenement, date,ville, prix,place ;
+   
+    
 
 const  article = document.querySelectorAll('.artileinfo');
 article.forEach(art => {
@@ -9,11 +12,11 @@ article.forEach(art => {
     
 
      art.classList.add("bordercolor");
-    const evenement =art.children[0].textContent;
-    const date =art.children[1].textContent;
-    const ville =art.children[2].textContent;
-    const prix=art.children[3].textContent;
-    const place =art.children[4].textContent;
+     evenement =art.children[0].textContent;
+     date =art.children[1].textContent;
+     ville =art.children[2].textContent;
+     prix=art.children[3].textContent;
+     place =art.children[4].textContent; 
    
     
 });
@@ -21,14 +24,20 @@ article.forEach(art => {
 
 
 function suivant(t){
-    let    section2=document.getElementById("s2");
-    let    section1=document.getElementById("s1");
+    const   section2=document.getElementById("s2");
+    const   section1=document.getElementById("s1");
     section1.style.display='none';
     section2.style.display='flex';
+    const bille =section2.querySelector(".artileinfos2");
+    bille.children[2].textContent=place;
 
-    
  }
-
+function precident(){
+    const   section2=document.getElementById("s2");
+    const   section1=document.getElementById("s1");
+    section1.style.display='flex';
+    section2.style.display='none';
+}
 
 
     
