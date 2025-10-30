@@ -63,7 +63,7 @@ main{
  color: white;
 }
 .section2{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -140,7 +140,13 @@ form input{
     box-shadow: 2px 2px 3px rgb(86, 85, 85);  
 }
 .section3{
-    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.section4{
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 100%;
