@@ -7,6 +7,7 @@
 body{
     width:  100%;
     height: 100vh;
+    margin: 1rem 1rem;
     
     
 }
@@ -30,6 +31,30 @@ main{
     background-color: rgb(224, 255, 245);
     padding: 2rem;
     width: 90%;
+}
+.topnemero{
+    width: 90%;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+}
+.nomero{
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(16, 72, 201);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.entrenomero{
+     width: 2.6rem;
+     height: 5px;
+     border-radius: 2px;
+     background-color: rgb(16, 72, 201);
 }
 .artileinfo{
     border-radius: 10px;
@@ -63,10 +88,13 @@ main{
  color: white;
 }
 .section2{
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+#s2-1{
+    background-color:rgb(0, 169, 65);
 }
 .billets{
     display: flex;
@@ -140,16 +168,22 @@ form input{
     box-shadow: 2px 2px 3px rgb(86, 85, 85);  
 }
 .section3{
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
+.gren{
+    background-color: rgb(0, 169, 65);
+}
 .section4{
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+.gren4{
+    background-color: rgb(0, 169, 65);
 }
 .informationajouter{
     display: flex;
