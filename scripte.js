@@ -1,10 +1,18 @@
 
+const  article = document.querySelectorAll('.artileinfo');
+article.forEach(art => {
+  art.addEventListener('click',()=>{
 
-function slectionert(index){
-  let select = document.getElementById(index);
-  select.classList.toggle("bordercolor");
-    
-}
+    article.forEach(el => {
+        el.classList.remove("bordercolor");
+    });
+     art.addEventListener('click',()=>{
+
+     art.classList.add("bordercolor");
+    });
+});
+});
+
 
 function suivant(t){
     let    section2=document.getElementById("s2");
