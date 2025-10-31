@@ -39,5 +39,19 @@ function precident(){
     section2.style.display='none';
 }
 
+let conteur=document.getElementById("cunteur")
+let count=1;
+function plus(){
+    count++;
+    conteur.innerHTML=count;
+}
+function moin(){
+    if(count>1){
+      count--;
+    conteur.innerHTML=count;
+    }
+    
+}
+
 
     
