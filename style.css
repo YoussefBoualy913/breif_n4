@@ -8,6 +8,7 @@ body{
     width:  100%;
     height: 100vh;
     margin: 1rem 1rem;
+   
     
     
 }
@@ -64,7 +65,7 @@ main{
     flex-direction: column;
     align-items: center;
     gap:1rem;
-    background-color: white;
+    background-color:white;
     padding: 1em;
     box-shadow: 2px 2px 3px rgb(86, 85, 85);  
 }
@@ -196,7 +197,7 @@ form input{
 @media (width>=500px) {
     .evenment{
     display: grid;
-    grid-template-columns: repeat(auto-fitl,20%);
+    grid-template-columns: repeat(auto-fitl,30%);
     grid-template-rows: 5% 50%  50%;
     column-gap:0px;
     row-gap: 0px;
@@ -205,11 +206,11 @@ form input{
     border-radius: 20px;
     background-color: rgb(224, 255, 245);
     
-    width: 40%;
+    width: 60%;
 }
 .artileinfo{
     border-radius: 10px;
-    width: 60%;
+    width: 80%;
     height: 90%;
     display: flex;
     flex-direction: column;

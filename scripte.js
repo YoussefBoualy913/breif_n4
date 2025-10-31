@@ -1,4 +1,4 @@
-let evenement, date,ville, prix,place ;
+let evenement, date,ville, prix,place,nombrplace;
    
     
 
@@ -16,7 +16,9 @@ article.forEach(art => {
      date =art.children[1].textContent;
      ville =art.children[2].textContent;
      prix=art.children[3].textContent;
-     place =art.children[4].textContent; 
+     place =art.children[4].textContent;
+     nombrplace=art.children[4].children[0].textContent;
+     console.log(nombrplace);
    
     
 });
@@ -42,8 +44,11 @@ function precident(){
 let conteur=document.getElementById("cunteur")
 let count=1;
 function plus(){
-    count++;
+    if(count<nombrplace){
+        count++;
     conteur.innerHTML=count;
+    }
+    
 }
 function moin(){
     if(count>1){
