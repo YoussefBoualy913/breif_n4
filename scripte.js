@@ -1,4 +1,5 @@
-let evenement, date,ville, prix,place,nombrplace,  c=0;;
+let evenement, date,ville, prix,place,nombrplace,  c=0;
+let conteur=document.getElementById("cunteur");
    
     
 
@@ -19,6 +20,8 @@ article.forEach(art => {
      place =art.children[4].textContent;
      nombrplace=art.children[4].children[0].textContent;
       c=0;
+      conteur.innerHTML=1;
+     
      
    
     
@@ -52,9 +55,9 @@ function changepages(index1,index2){
 //     section1.style.display='flex';
 //     section2.style.display='none';
 // }
-
-let conteur=document.getElementById("cunteur")
 let count=1;
+
+
 function plus(){
     if(count<nombrplace){
         count++;
