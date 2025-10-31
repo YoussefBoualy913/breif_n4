@@ -53,9 +53,9 @@ main{
 }
 .entrenomero{
      width: 2.6rem;
-     height: 5px;
+     height: 3px;
      border-radius: 2px;
-     background-color: rgb(16, 72, 201);
+     background-color: rgb(157, 159, 162);
 }
 .artileinfo{
     border-radius: 10px;
@@ -176,6 +176,17 @@ form input{
 }
 .gren{
     background-color: rgb(0, 169, 65);
+}
+#formul{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.inputdiv{
+    display: flex;
+    flex-direction: column;
+    gap:0.2rem;
+   
 }
 .section4{
     display: none;

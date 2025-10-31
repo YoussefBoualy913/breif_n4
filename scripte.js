@@ -40,24 +40,8 @@ function changepages(index1,index2){
     textContent=nombrplace;
     c++;}
 }
-// function suivant(t){
-//     const   section2=document.getElementById("s2");
-//     const   section1=document.getElementById("s1");
-//     section1.style.display='none';
-//     section2.style.display='flex';
-//     const bille =section2.querySelector(".artileinfos2");
-//     bille.children[2].textContent=place;
 
-//  }
-// function precident(){
-//     const   section2=document.getElementById("s2");
-//     const   section1=document.getElementById("s1");
-//     section1.style.display='flex';
-//     section2.style.display='none';
-// }
 let count=1;
-
-
 function plus(){
     if(count<nombrplace){
         count++;
@@ -72,6 +56,60 @@ function moin(){
     }
     
 }
+
+function message_errors(select,message){
+    document.querySelector(select).innerHTML= message;
+}
+ 
+const form = document.getElementById("formul")
+
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const regexemail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/
+    const regextele = /(\+212|0)([ \-_/]*)(\d[ \-_/]*){9}/
+  
+    const nom = form.querySelector('#nom');
+    console.log(form.innerHTML);
+    const prenom = form.querySelector('#prenom');
+     const email = form.querySelector('#email');
+    const tele = form.querySelector('#tele');
+    if(nom.value.trim()==''){
+        nom.style.border = "1px solid red";
+        message_errors("#nomerrur","nom n'est pas valide");
+        return;
+    }
+    if(prenom.value.trim()==''){
+        prenom.style.border = "1px solid red";
+        message_errors("#prenomerrur","nom n'est pas valide!");
+        return;
+    }
+    if(!regexemail.test(email.value)){
+        email.style.border = "1px solid red";
+        message_errors("#emailerrur","email n'est pas valide");
+        return;
+        
+    }
+    if(!regextele.test(email.value)){
+        email.style.border = "1px solid red";
+        message_errors("#teleerrur","email n'est pas valide");
+        return;
+        
+    }
+
+    const afffichier = document.querySelector('.affichier');
+
+    afffichier.innerHTML +=`
+        <div>
+            <ul>
+                <li>Nom : ${nom.value}</li>
+                <li>Email : ${email.value}</li>
+                <li>prenom : ${prenom.value}</li>
+                <li>tele : ${tele.value}</li>
+            </ul>
+        </div>
+    `
+
+})
 
 
     

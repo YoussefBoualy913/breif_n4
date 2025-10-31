@@ -23,7 +23,7 @@
             <artile class="artileinfo" id="1">
                 <h3>fisteval music live</h3>
                 <p>Date:2/4/2025</p>
-                <p>ville :casablaca</p>
+                <p>ville :casablaca</p>q    
                 <p>prix :100 DH</p>
                 <p>place : <span>23</span></p>
             </artile>
@@ -99,17 +99,29 @@
             <div class="billets">
             <artile class="artileformul">
                 <h5>participant:</h5>
-                <form>
-                    <label for="nom">Nom:</label><br>
-                    <input type="text" name="nom" id="nom">
-                     <label for="prenom">Prenom:</label><br>
-                    <input type="text" name="prenom" id="prenom">
-                     <label for="email">Email:</label><br>
-                    <input type="text" name="email" id="email">
-                     <label for="telephon">Telephon:</label><br>
-                    <input type="text" name="telephon" id="telephon">
+                <form action="?" method="" id="formul">
+                    <div class="inputdiv">
+                       <label for="nom">Nom:</label>
+                       <input type="text" name="nom" id="nom">
+                       <div id="nomerrur"></div>
+                    </div>
+                     <div  class="inputdiv">
+                        <label for="prenom">Prenom:</label>
+                        <input type="text" name="prenom" id="prenom">
+                        <div id="prenomerrur"></div>
+                    </div>
+                    <div  class="inputdiv">
+                         <label for="email">Email:</label>
+                         <input type="text" name="email" id="email">
+                         <div id="emailerrur"></div>
+                    </div>
+                    <div  class="inputdiv">
+                        <label for="telephon">Telephon:</label>
+                        <input type="text" name="telephon" id="tele">
+                        <div id="teleerrur"></div>
+                    </div>
                 </form>
-                 <button type="submit"  id="btn">ajouter</button>
+                 <input  type="submit" value="Envoyer" id="btn">
                
             </artile>
              <artile class="artileinfos3">
