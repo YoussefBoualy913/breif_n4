@@ -83,7 +83,7 @@
            </div>
            <div class="btndiv">
             <button class="btn" onclick="changepages('s2','s1')">précident</button>
-             <button class="btn"onclick="changepages('s2','s3')">suivant</button>
+             <button class="btn" id="btn2">suivant</button>
         </div>
         </section>
         <section class="section3" id="s3">
@@ -96,9 +96,9 @@
                 <div class="entrenomero"></div>
                 <div class="nomero">4</div>
             </div>
-            <div class="billets">
-            <artile class="artileformul">
-                <h5>participant:</h5>
+            <div class="contenairformu">
+            <div class="artileformul">
+                <h5 id="titreformul"></h5>
                 <form action="?" method="" id="formul">
                     <div class="inputdiv">
                        <label for="nom">Nom:</label>
@@ -120,20 +120,23 @@
                         <input type="text" name="telephon" id="tele">
                         <div id="teleerrur"></div>
                     </div>
+                    <div class="btndiv">
+                    <input  type="submit" value="Envoyer" id="btn">
+                    </div>
                 </form>
-                 <input  type="submit" value="Envoyer" id="btn">
+                 
                
-            </artile>
-             <artile class="artileinfos3">
+            </div>
+             <div class="artileinfos3">
                 
                 
               
                
-            </artile>
+             </div>
            </div>
            <div class="btndiv">
             <button class="btn"onclick="changepages('s3','s2')">précident</button>
-             <button class="btn" onclick="changepages('s3','s4')">suivant</button>
+             <button class="btn" id="btn3">suivant</button>
         </div>
         </section>
          <section class="section4" id="s4">

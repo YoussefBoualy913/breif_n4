@@ -1,5 +1,5 @@
 let evenement, date,ville, prix,place,nombrplace,  c=0;
-let conteur=document.getElementById("cunteur");
+const conteur=document.getElementById("cunteur");
    
     
 
@@ -45,71 +45,119 @@ let count=1;
 function plus(){
     if(count<nombrplace){
         count++;
-    conteur.innerHTML=count;
+    conteur.textContent=count;
     }
     
 }
 function moin(){
     if(count>1){
       count--;
-    conteur.innerHTML=count;
+    conteur.textContent=count;
     }
     
 }
 
+const btn2=document.querySelector("#btn2");
+btn2.addEventListener("click",()=>{
+     const sect2=document.getElementById("s2");
+    const sect3=document.getElementById("s3");
+     sect2.style.display='none';
+    sect3.style.display='flex';
+     titlform.textContent="participant:"+1+"/"+conteur.textContent;
+
+}
+
+)
 function message_errors(select,message){
     document.querySelector(select).innerHTML= message;
+    document.querySelector(select).style.fontSize='10px';
+    document.querySelector(select).style.color='red';
 }
  
-const form = document.getElementById("formul")
 
+let titlform=document.getElementById("titreformul");
+
+
+const form = document.getElementById("formul");
+let contur2=1;
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
     const regexemail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/
     const regextele = /(\+212|0)([ \-_/]*)(\d[ \-_/]*){9}/
   
     const nom = form.querySelector('#nom');
-    console.log(form.innerHTML);
     const prenom = form.querySelector('#prenom');
      const email = form.querySelector('#email');
     const tele = form.querySelector('#tele');
     if(nom.value.trim()==''){
         nom.style.border = "1px solid red";
         message_errors("#nomerrur","nom n'est pas valide");
-        return;
+       return;
     }
     if(prenom.value.trim()==''){
         prenom.style.border = "1px solid red";
-        message_errors("#prenomerrur","nom n'est pas valide!");
-        return;
+        message_errors("#prenomerrur","preom n'est pas valide!");
+       return;
     }
     if(!regexemail.test(email.value)){
         email.style.border = "1px solid red";
         message_errors("#emailerrur","email n'est pas valide");
-        return;
+      return;
         
     }
-    if(!regextele.test(email.value)){
-        email.style.border = "1px solid red";
-        message_errors("#teleerrur","email n'est pas valide");
-        return;
+    if(!regextele.test(tele.value)){
+        tele.style.border = "1px solid red";
+        message_errors("#teleerrur","telephone n'est pas valide");
+       return;
         
     }
-
-    const afffichier = document.querySelector('.affichier');
+    
+    if(contur2<=conteur.textContent ){
+    const afffichier = document.querySelector('.artileinfos3');
 
     afffichier.innerHTML +=`
-        <div>
+        <div  class="participant">
             <ul>
-                <li>Nom : ${nom.value}</li>
-                <li>Email : ${email.value}</li>
-                <li>prenom : ${prenom.value}</li>
-                <li>tele : ${tele.value}</li>
+                <li style="list-style:none;">Nom : ${nom.value}</li>
+                <li style="list-style:none;">Email : ${email.value}</li>
+                <li style="list-style:none;">prenom : ${prenom.value}</li>
+                <li style="list-style:none;">tele : ${tele.value}</li>
             </ul>
+            <div align="right"><button class="supprimer">supprimer</button></div>
         </div>
     `
+    
+    contur2++;
+    if(contur2<=conteur.textContent){
+   titlform.textContent="participant:"+contur2+"/"+conteur.textContent;
+    }
+    
+   }else{window.alert("vous avez terminer les participantes")}
+   const supprimer=document.querySelectorAll(".supprimer");
+     supprimer.forEach(suppr =>{
+   suppr.addEventListener("click",()=>{
 
-})
+     suppr.parentElement.parentElement.remove();
+     if(contur2>1){
+      contur2--;
+       titlform.textContent="participant:"+contur2+"/"+conteur.textContent;}
+});
+});
+
+});
+
+const btn3=document.querySelector("#btn3");
+btn3.addEventListener("click",()=>{
+     const sect3=document.getElementById("s3");
+    const sect4=document.getElementById("s4");
+    if(contur2>conteur.textContent){
+        sect3.style.display='none';
+       sect4.style.display='flex';
+    };
+     
+     
+
+});
 
 
     
