@@ -16,7 +16,7 @@ article.forEach(art => {
      evenement =art.children[0].textContent;
      date =art.children[1].textContent;
      ville =art.children[2].textContent;
-     prix=art.children[3].textContent;
+     prix=art.children[3].children[0].textContent;
      place =art.children[4].textContent;
      nombrplace=art.children[4].children[0].textContent;
       c=0;
@@ -80,6 +80,7 @@ let titlform=document.getElementById("titreformul");
 
 const form = document.getElementById("formul");
 let contur2=1;
+const information=[];
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
     const regexemail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/
@@ -126,7 +127,15 @@ form.addEventListener("submit",(e)=>{
             <div align="right"><button class="supprimer">supprimer</button></div>
         </div>
     `
-    
+    information.push({
+        participant:contur2,
+        nom: nom.value,
+        prenom: prenom.value,
+        email: email.value,
+        telephone: tele.value,
+    });
+   
+
     contur2++;
     if(contur2<=conteur.textContent){
    titlform.textContent="participant:"+contur2+"/"+conteur.textContent;
@@ -147,17 +156,34 @@ form.addEventListener("submit",(e)=>{
 });
 
 const btn3=document.querySelector("#btn3");
+const infogen=document.getElementById("infogen");
 btn3.addEventListener("click",()=>{
      const sect3=document.getElementById("s3");
     const sect4=document.getElementById("s4");
     if(contur2>conteur.textContent){
         sect3.style.display='none';
        sect4.style.display='flex';
-    };
-     
-     
+    
+       
+      infogen.innerHTML=`
+      <h3>${evenement}
+      </h3>
+      <p>${date}</p>
+      <p>${ville}</p>
+      <p>Nombre de billets:${conteur.textContent}</p>
+      <p>
+      </p>
+      `
+       const totle=document.getElementById("ptotale");
 
-});
+       totle.textContent="Total:"+conteur.textContent*prix+"DH";
+       console.log(conteur.textContent*prix);
+       }
+      
+    
+
+    });
+     
 
 
     

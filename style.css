@@ -7,7 +7,7 @@
 body{
     width:  100%;
     height: 100vh;
-    margin: 1rem 1rem;
+   
    
     
     
@@ -16,12 +16,15 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1rem 1rem;
 }
 .section1{
     display:flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+     gap: 2rem;
+     margin-bottom: 1rem;
 }
 .evenment{
     display: flex;
@@ -93,6 +96,7 @@ main{
     flex-direction: column;
     align-items: center;
     width: 100%;
+     gap: 2rem;
 }
 #s2-1{
     background-color:rgb(0, 169, 65);
@@ -189,6 +193,7 @@ form input{
     flex-direction: column;
     align-items: center;
     width: 100%;
+     gap: 2rem;
 }
 .gren{
     background-color: rgb(0, 169, 65);
@@ -218,7 +223,39 @@ form input{
     display: none;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
     width: 100%;
+}
+.artileifogenerale{
+     border-radius: 10px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    gap:1rem;
+    background-color: white;
+    padding: 1em;
+    box-shadow: 2px 2px 3px rgb(86, 85, 85);
+}
+#infogen{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2%;
+}
+#contenairetotal{
+    display: flex;
+    justify-content: center;
+}
+#ptotale{
+    text-align: center;
+    width: 90%;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: rgb(0, 210, 14);
+    color: white;
+    
 }
 .gren4{
     background-color: rgb(0, 169, 65);
@@ -282,6 +319,17 @@ form input{
  border: none;
  background-color: blue;
  color: white;
+}
+.artileifogenerale{
+    display: flex;
+    flex-direction: row;
+    
+}
+#contenairetotal{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    flex-grow: 1;
 }
     
 }
